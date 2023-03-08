@@ -29,6 +29,9 @@ const clearDataFromLocalStorage = () => {
 form.addEventListener('input', saveDataToLocalStorage);
 
 form.addEventListener('submit', event => {
+  if (form.elements.email.value === '' || form.elements.message.value === '') {
+    alert("Can't submit empty field");
+  }
   event.preventDefault();
   console.log({
     email: form.elements.email.value,

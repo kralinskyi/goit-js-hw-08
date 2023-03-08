@@ -15,4 +15,4 @@ player.on('play', () => {
   player.setVolume(0.5);
 });
 
-player.setCurrentTime(localStorage.getItem(TIME_KEY));
+player.setCurrentTime(localStorage.getItem(TIME_KEY) || 0);
