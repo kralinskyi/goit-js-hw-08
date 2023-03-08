@@ -16,8 +16,8 @@ const restoreDataFromStorage = () => {
   const { email, message } = form.elements;
 
   if (savedData) {
-    email.value = savedData.email;
-    message.value = savedData.message;
+    form.elements.email.value = savedData.email;
+    form.elements.message.value = savedData.message;
   }
 };
 
