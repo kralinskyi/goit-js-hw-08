@@ -11,8 +11,8 @@ const onPlay = ({ seconds }) => {
 
 player.on('timeupdate', throttle(onPlay, 1000));
 
-try {
-  player.setCurrentTime(localStorage.getItem(TIME_KEY));
-} catch (error) {
-  console.error('something went wrong! Look - ', error);
-}
+player.on('play', () => {
+  player.setVolume(0.5);
+});
+
+player.setCurrentTime(localStorage.getItem(TIME_KEY));
