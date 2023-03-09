@@ -31,6 +31,7 @@ form.addEventListener('input', saveDataToLocalStorage);
 form.addEventListener('submit', event => {
   if (form.elements.email.value === '') {
     alert('Please fill in your email and let us know how we can assist you.');
+    return;
   }
   event.preventDefault();
   console.log({
